@@ -1,0 +1,14 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: $default;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
