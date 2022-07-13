@@ -18,6 +18,7 @@
   text-transform: uppercase;
 
   &__list {
+    color: $dark-900;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -29,8 +30,7 @@
   }
 
   &__link {
-    color: $dark-900;
-    padding-bottom: 3px;
+    padding: 0 2px 3px;
     transition: all 0.3s ease-in-out;
   }
 
