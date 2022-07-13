@@ -1,0 +1,47 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: $default;
+  font-size: $font-size;
+  line-height: $line-height;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  padding: 12px 25px;
+  font-family: "Roboto-Regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  border: none;
+  background-color: $accent;
+  color: $white;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+  transition: background-color .3s ease-in-out;
+
+  &:hover {
+    background-color: $hover-btn;
+  }
+  
+}
+
+
+
