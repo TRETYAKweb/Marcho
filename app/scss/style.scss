@@ -1,13 +1,15 @@
 @import "reset";
-@import "vars";
 @import "fonts";
+@import "vars";
+@import "libs";
 @import "global";
 
 @import "components/header";
 
+@import "components/home/top-slider";
+
 
 
 @import "components/footer";
-
 
 @import "media";
