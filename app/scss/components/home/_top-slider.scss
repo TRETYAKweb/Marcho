@@ -1,0 +1,93 @@
+.top-slider {
+  padding: 65px 0 40px;
+  background-repeat: no-repeat;
+  background-color: $bg-color;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  &__container {
+    max-width: 1560px;
+  }
+
+  &__content {
+    padding-left: 175px;
+    padding-top: 125px;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    max-width: 670px;
+    font-family: "Roboto";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 58px;
+    line-height: 68px;
+    color: $dark-900;
+    margin-bottom: 35px;
+  }
+
+  &__title span {
+    display: block;
+  }
+
+  &__text {
+    max-width: 470px;
+    margin-bottom: 55px;
+  }
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: -70px;
+
+  li:not(:last-child) {
+    margin-right: 6px;
+  }
+
+  li button {
+    padding: 0;
+    font-size: 0;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    line-height: 0;
+    position: relative;
+  }
+
+  li button::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: $default;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .slick-active button {
+    border-color: $accent;
+  }
+
+  .slick-active button::before {
+        background-color: $accent;
+  }
+
+  // .slick-active button::before {
+  //   content: "";
+  //   position: absolute;
+  //   width: 27px;
+  //   height: 27px;
+  //   border: 1px solid $accent;
+  //   border-radius: 50%;
+  //   transform: translate(-50%, -50%);
+  // }
+}

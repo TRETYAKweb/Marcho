@@ -1,0 +1,123 @@
+.footer {
+  background-color: $bg-color;
+
+  &__top {
+    font-weight: 500;
+    padding: 75px 0 40px;
+    border-bottom: 1px solid $border-color;
+    display: flex;
+  }
+
+  &__contact-info {
+    max-width: 250px;
+    width: 100%;
+    margin-right: 50px;
+  }
+
+  &__nav {
+    max-width: 170px;
+    width: 100%;
+    margin-right: 30px;
+  }
+
+  &__subscription {
+    max-width: 470px;
+    width: 100%;
+  }
+
+  &__logo {
+    margin-bottom: 35px;
+    display: block;
+  }
+
+  &__adress,
+  &__email,
+  &__phone {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  &__phone {
+    margin-bottom: 45px;
+  }
+
+  &__title {
+    margin-bottom: 39px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 22px;
+    color: $dark-900;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+  }
+
+  &__social-item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__social-img {
+    transition: fill 0.3s ease-in-out;
+    fill: $default;
+  }
+
+  &__social-img:hover {
+    fill: $accent;
+  }
+
+  &__link {
+    transition: color 0.3s ease-in-out;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__link:hover {
+    color: $accent;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+  }
+
+  &__input {
+    background: $white;
+    border: none;
+    border-radius: 0;
+    max-width: 320px;
+    width: 100%;
+    padding: 12px 15px;
+    box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+    outline-color: $accent;
+  }
+
+  &__input::placeholder {
+    color: $default;
+  }
+
+  &__bottom {
+    font-size: 12px;
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__accept {
+    display: flex;
+    align-items: center;
+  }
+
+  &__accept span {
+    margin-right: 20px;
+  }
+
+  &__accept img:not(:last-child) {
+    margin-right: 25px;
+  }
+
+}
