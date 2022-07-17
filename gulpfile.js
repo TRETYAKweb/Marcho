@@ -1,98 +1,95 @@
-const { src, dest, watch, parallel, series } = require('gulp');
+const { src, dest, watch, parallel, series } = require('gulp')
 
-const sass          = require('gulp-sass')(require('sass'));
-const concat        = require('gulp-concat');
-const autoprefixer  = require('gulp-autoprefixer');
-const uglify        = require('gulp-uglify');
-const imagemin      = require('gulp-imagemin');
-const del           = require('del');
-const browserSync   = require('browser-sync').create();
+const BASE_PATH = 'app'
+const DIST_PATH = 'dist'
+const GITHUB_PAGES_PATH = 'docs'
+
+const sass = require('gulp-sass')(require('sass'))
+const concat = require('gulp-concat')
+const autoprefixer = require('gulp-autoprefixer')
+const uglify = require('gulp-uglify')
+const imagemin = require('gulp-imagemin')
+const del = require('del')
+const browserSync = require('browser-sync').create()
+
+const makeGithubPages = () => src(`${DIST_PATH}/**/*`).pipe(dest(GITHUB_PAGES_PATH))
 
 function browsersync() {
-
   browserSync.init({
     server: {
-      baseDir: 'app/'
-    }
+      baseDir: `${BASE_PATH}/`,
+    },
   })
-  
 }
 
 function styles() {
-
-  return src('app/scss/style.scss')
-    .pipe(sass({outputStyle: 'compressed'}))
+  return src(`${BASE_PATH}/scss/style.scss`)
+    .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(concat('style.min.css'))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 10 versions'],
-      grid: true
+      grid: true,
     }))
-    .pipe(dest('app/css'))
+    .pipe(dest(`${BASE_PATH}/css`))
     .pipe(browserSync.stream())
 }
 
 function scripts() {
-
   return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.js',
-    'app/js/main.js'
+    `${BASE_PATH}/js/main.js`,
   ])
 
-  .pipe(concat('main.min.js'))
-  .pipe(uglify())
-  .pipe(dest('app/js'))
-  .pipe(browserSync.stream())
-  
+    .pipe(concat('main.min.js'))
+    .pipe(uglify())
+    .pipe(dest(`${BASE_PATH}/js`))
+    .pipe(browserSync.stream())
 }
 
-function images(){
-
-  return src('app/images/**/*.*')
-  .pipe(imagemin([
-    imagemin.gifsicle({ interlaced: true}),
-    imagemin.mozjpeg({ quality: 75, progressive: true}),
-    imagemin.optipng({ optimizationLevel: 5}),
-    imagemin.svgo({
-      plugins: [
-        { removeViewBox: true },
-        { cleanupIDs: false }
-      ]
-    }),
-  ]))
-  .pipe(dest('dist/images'))
-
+function images() {
+  return src(`${BASE_PATH}/images/**/*.*`)
+    .pipe(imagemin([
+      imagemin.gifsicle({ interlaced: true }),
+      imagemin.mozjpeg({ quality: 75, progressive: true }),
+      imagemin.optipng({ optimizationLevel: 5 }),
+      imagemin.svgo({
+        plugins: [
+          { removeViewBox: true },
+          { cleanupIDs: false },
+        ],
+      }),
+    ]))
+    .pipe(dest(`${DIST_PATH}/images`))
 }
 
-const fonts = () => src('app/fonts/*.{woff,woff2}').pipe(dest('dist/fonts'));
+const fonts = () => src(`${BASE_PATH}/fonts/*.{woff,woff2}`).pipe(dest(`${DIST_PATH}/fonts`))
 
 function build() {
   return src([
-    'app/**/*.html',
-    'app/css/style.min.css',
-    'app/js/main.min.js'
-  ], {base: 'app'})
-  .pipe(dest('dist'))
+    `${BASE_PATH}/**/*.html`,
+    `${BASE_PATH}/css/style.min.css`,
+    `${BASE_PATH}/js/main.min.js`,
+  ], { base: BASE_PATH })
+    .pipe(dest(DIST_PATH))
 }
 
 function cleanDist() {
-  return del('dist')
+  return del(DIST_PATH)
 }
 
 function watching() {
-
-  watch(['app/scss/**/*.scss'], styles);
-  watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/**/*.html']).on('change', browserSync.reload);
-  
+  watch([`${BASE_PATH}/scss/**/*.scss`], styles)
+  watch([`${BASE_PATH}/js/**/*.js`, `!${BASE_PATH}/js/main.min.js`], scripts)
+  watch([`${BASE_PATH}/**/*.html`]).on('change', browserSync.reload)
 }
 
-exports.styles      = styles;
-exports.scripts     = scripts;
-exports.browsersync = browsersync;
-exports.watching    = watching;
-exports.images      = images;
-exports.cleanDist   = cleanDist;
+exports.styles = styles
+exports.scripts = scripts
+exports.browsersync = browsersync
+exports.watching = watching
+exports.images = images
+exports.cleanDist = cleanDist
 
-exports.build = series(cleanDist, images, fonts, build);
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.build = series(cleanDist, images, fonts, build, makeGithubPages)
+exports.default = parallel(styles, scripts, browsersync, watching)
