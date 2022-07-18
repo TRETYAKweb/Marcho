@@ -91,11 +91,12 @@
   }
 }
 
+
 .categiries {
   &__title {
     text-align: center;
+    color: $accent;
   }
-
 
   &__items {
     display: grid;
