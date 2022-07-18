@@ -21,11 +21,11 @@
 
   &__title {
     max-width: 670px;
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 58px;
-    line-height: 68px;
+    font-size: 48px;
+    line-height: 58px;
     color: $dark-900;
     margin-bottom: 35px;
   }
@@ -70,7 +70,7 @@
     border-radius: 50%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
 
   .slick-active button {
@@ -78,7 +78,7 @@
   }
 
   .slick-active button::before {
-        background-color: $accent;
+    background-color: $accent;
   }
 
   // .slick-active button::before {

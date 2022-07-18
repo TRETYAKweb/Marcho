@@ -53,3 +53,13 @@ body {
     background-color: $hover-btn;
   }
 }
+
+.title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 58px;
+  color: $dark-900;
+  text-transform: uppercase;
+}

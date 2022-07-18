@@ -1,0 +1,189 @@
+.categiries-info {
+  padding: 120px 0;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 120px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 121px;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    background-image: url("../images/info/info-before-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 65px;
+    height: 52px;
+    bottom: 0;
+    right: 0;
+    transform: translate(35%, 45%);
+    background-image: url("../images/info/info-after-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 1;
+  }
+
+  &__item {
+    background: white;
+    padding: 60px 40px;
+    box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+    max-width: 370px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__content {
+    padding-top: 100px;
+    position: relative;
+  }
+
+  &__content::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &__content--delivery::before {
+    background-image: url("../images/icons/info/delivery.svg");
+  }
+
+  &__content--return::before {
+    background-image: url("../images/icons/info/return.svg");
+  }
+
+  &__content--support::before {
+    background-image: url("../images/icons/info/support.svg");
+  }
+
+  &__title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: $dark-900;
+    margin-bottom: 17px;
+  }
+}
+
+.categiries {
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    text-align: center;
+    max-width: 570px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+
+  &__items {
+    display: grid;
+    min-height: 635px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  &__item {
+    padding: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 100% 100%;
+  }
+
+  &__item--jewellry {
+    grid-column: 1/2;
+    grid-row: span 2;
+    background-color: #eedeef;
+    background-size: 75%;
+  }
+
+  &__item--accessories {
+    grid-column: 2/-1;
+    grid-row: span 1;
+    background-color: #deeeef;
+    background-size: 45%;
+    background-position: 95% 100%;
+  }
+
+  &__item--mens-fashion {
+    grid-column: 2/3;
+    grid-row: span 1;
+    background-color: #fef6a9;
+  }
+
+  &__item--girls-fashion {
+    grid-column: 3/-1;
+    grid-row: span 1;
+    background-color: #ececec;
+  }
+
+  &__content {
+    color: $dark-900;
+  }
+
+  &__subtitle {
+    margin-bottom: 12px;
+  }
+
+  &__subtitle--purple {
+    color: #5800e4;
+  }
+
+  &__subtitle--accent {
+    color: $accent;
+  }
+
+  &__subtitle--yellow {
+    color: #ffb534;
+  }
+
+  &__subtitle--blue {
+    color: #34c3ff;
+  }
+
+  &__item-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    transition: color .3s ease-in-out, border-bottom .3s ease-in-out ;
+  }
+
+  &__link:hover {
+    color: $accent;
+    border-bottom: 1px solid $accent;
+  }
+}
