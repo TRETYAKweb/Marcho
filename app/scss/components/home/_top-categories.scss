@@ -1,5 +1,9 @@
 .categiries-info {
   padding: 120px 0;
+  background-image: url("../images/top-categories/top-categories-left-bg.svg"), url("../images/top-categories/top-categories-right-bg.svg");
+  background-repeat: no-repeat;
+  background-position: left, right;
+  background-size: auto, auto, cover;;
 }
 
 .info {
