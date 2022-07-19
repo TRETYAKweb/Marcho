@@ -14,6 +14,10 @@ body {
   flex-direction: column;
 }
 
+section {
+  padding: 120px 0;
+}
+
 .main {
   flex-grow: 1;
 }
@@ -37,7 +41,7 @@ body {
 }
 
 .btn {
-  padding: 12px 25px;
+  padding: 15px 35px;
   font-family: "Roboto-Regular", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -66,8 +70,6 @@ body {
 }
 
 .text {
-  text-align: center;
   max-width: 570px;
-  margin: 0 auto;
   margin-bottom: 60px;
 }
