@@ -1,44 +1,50 @@
 // Базовые цвета
 
-$dark-900:                    #29282d;
-$white:                       #ffffff;
+$dark-900: #29282d;
+$white: #ffffff;
 
-$border-color:                #ececec;
-$bg-color:                    #f6f6f6;
+$border-color: #ececec;
+$bg-color: #f6f6f6;
 
-$accent:                      #fe3e57;
-$default:                     #8d8d8d;
+$accent: #fe3e57;
+$default: #8d8d8d;
 
 // hovers
-$hover-btn:                   #bd2c3f;
-$down-btn:                    #63A60E;
+$hover-btn: #bd2c3f;
+$down-btn: #63a60e;
 
 // Типографика
 
 %quicksand-400 {
-  font-family: 'Quicksand-Regular', sans-serif;
+  font-family: "Quicksand-Regular", sans-serif;
   font-weight: 400;
 }
 
 %quicksand-500 {
-  font-family: 'Quicksand-Medium', sans-serif;
+  font-family: "Quicksand-Medium", sans-serif;
   font-weight: 500;
 }
 
 %roboto-400 {
-  font-family: 'Roboto-Regular', sans-serif;
+  font-family: "Roboto-Regular", sans-serif;
   font-weight: 400;
 }
 
 %roboto-700 {
-  font-family: 'Roboto-Bold', sans-serif;
+  font-family: "Roboto-Bold", sans-serif;
   font-weight: 700;
 }
 
+$font-size: 16px;
+$line-height: 26px;
 
-$font-size:                   16px;
-$line-height:                 26px;
+$font-size-h1: 58px;
+$font-size-h2: 48px;
+$font-size-h3: 22px;
 
-$font-size-h1:                58px;
-$font-size-h2:                48px;
-$font-size-h3:                22px;
+// @function max($numbers...) {
+//   @return m#{a}x(#{$numbers});
+// }
+// @function min($numbers...) {
+//   @return m#{i}n(#{$numbers});
+// }

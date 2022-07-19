@@ -1,5 +1,4 @@
 .categiries-info {
-  padding: 120px 0;
   background-image: url("../images/top-categories/top-categories-left-bg.svg"), url("../images/top-categories/top-categories-right-bg.svg");
   background-repeat: no-repeat;
   background-position: left, right 67%;
@@ -95,7 +94,12 @@
 .categiries {
   &__title {
     text-align: center;
-    color: $accent;
+  }
+
+  &__text {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 60px;
   }
 
   &__items {
