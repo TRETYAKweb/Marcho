@@ -10,7 +10,130 @@
 @import "components/home/top-categories";
 @import "components/home/video-fashion";
 
+.products {
 
+  text-align: center;
+  
+  &__title {
+    text-align: center;
+  }
+
+  &__text {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+
+.product {
+  max-width: 370px;
+
+  &__img-box {
+    position: relative;
+    height: 370px;
+    overflow: hidden;
+    margin-bottom: 25px;
+  }
+
+  &__images {
+    object-fit: cover;
+  }
+
+  &__link-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    background-color: $white;
+    width: 220px;
+    height: 50px;
+    margin: 0 auto;
+    box-shadow: 0px 5px 30px 0px rgba(152, 152, 152, 0.2);
+    border-radius: 22px;
+    transform: translateY(300%);
+    transition: transform .3s ease-in-out;
+  }
+
+
+  &__link {
+    display: inherit;
+  }
+
+  &__link svg {
+
+    fill: $dark-900;
+    transition: fill .3s ease-in-out;
+    
+  }
+
+  &__link svg:hover {
+
+    fill: $accent;
+
+  }
+
+  &__link--line::before,
+  &__link--line::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 30px;
+    background-color: $border-color;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__link--line::before {
+    left: 70px;
+  }
+
+  &__link--line::after {
+    right: 70px;
+  }
+
+  &__title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: $dark-900;
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 20px;
+    transition: color .3s ease-in-out, border-bottom .3s ease-in-out;
+  }
+
+  &__title:hover {
+    color: $accent;
+    border-bottom: 1px solid $accent;
+  }
+
+  &__price:not(:last-child) {
+    margin-right: 25px;
+  }
+
+  &__price {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: $dark-900;
+  }
+
+  &__price--old {
+    position: relative;
+    color: #ccccce;
+    text-decoration: line-through ;
+  }
+
+  &:hover {
+
+    .product__link-box {
+
+      transform: translateY(0%);
+
+    }
+  }
+}
 
 @import "components/footer";
 
