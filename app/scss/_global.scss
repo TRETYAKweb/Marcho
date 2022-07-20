@@ -56,6 +56,20 @@ section {
   &:hover {
     background-color: $hover-btn;
   }
+
+  &--border {
+    background-color: transparent;
+    color: $dark-900;
+    box-shadow: none;
+    border: 1px solid $accent;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+  }
+
+  &--border:hover {
+    background-color: $hover-btn;
+    color: $white;
+    border: 1px solid $hover-btn;
+  }
 }
 
 .title {
