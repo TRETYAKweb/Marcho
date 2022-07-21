@@ -23,6 +23,16 @@
     text-align: center;
     margin-bottom: 60px;
   }
+
+  &__items {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px 30px;   
+    margin-bottom: 60px; 
+
+  }
+
 }
 
 .product {
@@ -37,6 +47,7 @@
 
   &__images {
     object-fit: cover;
+    object-position: 50% 50%;
   }
 
   &__link-box {
@@ -134,6 +145,28 @@
     }
   }
 }
+
+.sale-badge {
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 10px;
+  line-height: 1;
+  background-color: $accent;
+  color: $white;
+  top: 25px;
+  left: 25px;
+  box-shadow: 0px 7px 20px 0px rgba(254, 62, 87, 0.25);
+}
+
+.star {
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+
+
 
 @import "components/footer";
 
