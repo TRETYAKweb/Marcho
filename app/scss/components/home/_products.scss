@@ -1,7 +1,9 @@
 .products {
-
+  background-repeat: no-repeat;
+  background-position: 95% 5%;
+  background-size: 192px 197px;
   text-align: center;
-  
+
   &__title {
     text-align: center;
   }
@@ -13,14 +15,11 @@
   }
 
   &__items {
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 45px 30px;   
-    margin-bottom: 60px; 
-
+    gap: 45px 30px;
+    margin-bottom: 60px;
   }
-
 }
 
 .product {
@@ -53,25 +52,20 @@
     box-shadow: 0px 5px 30px 0px rgba(152, 152, 152, 0.2);
     border-radius: 22px;
     transform: translateY(300%);
-    transition: transform .3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
   }
-
 
   &__link {
     display: inherit;
   }
 
   &__link svg {
-
     fill: $dark-900;
-    transition: fill .3s ease-in-out;
-    
+    transition: fill 0.3s ease-in-out;
   }
 
   &__link svg:hover {
-
     fill: $accent;
-
   }
 
   &__link--line::before,
@@ -100,7 +94,7 @@
     font-size: 22px;
     line-height: 26px;
     margin-bottom: 20px;
-    transition: color .3s ease-in-out, border-bottom .3s ease-in-out;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
   }
 
   &__title:hover {
@@ -121,15 +115,12 @@
   &__price--old {
     position: relative;
     color: #ccccce;
-    text-decoration: line-through ;
+    text-decoration: line-through;
   }
 
   &:hover {
-
     .product__link-box {
-
       transform: translateY(0%);
-
     }
   }
 }
