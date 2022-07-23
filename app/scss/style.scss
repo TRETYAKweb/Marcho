@@ -30,8 +30,23 @@
 
   &__items {
     display: grid;
+    position: relative;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 30px;
+  }
+
+  &__items::before {
+    content: '';
+    position: absolute;
+    width: 126px;
+    height: 53px;
+    top: -30px;
+    right: -25px;
+    background-image: url("../images/blog/blog__decor.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: -1;
   }
 }
 
