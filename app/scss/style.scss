@@ -14,10 +14,9 @@
 @import "components/home/partners";
 
 .blog {
-  padding: 0 0 120px;
+  padding: 0 0 160px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: contain;
 
   &__title {
     text-align: center;
@@ -40,7 +39,7 @@
   background-color: $white;
   border: 1px solid $border-color;
 
-  transition: box-shadow .3s ease-in-out, border .1s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, border 0.1s ease-in-out;
 
   &:hover {
     box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
@@ -52,11 +51,12 @@
   }
 
   &__images {
+    height: 288px;
     object-fit: contain;
   }
 
   &__info {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
   }
@@ -89,8 +89,16 @@
     background-image: url("../images/icons/time.svg");
   }
 
+  &__info-link {
+    transition: all .3s ease-in-out;
+  }
+
   &__info-link:hover {
+    color: $accent;
     text-decoration-line: underline;
+    &::before {
+      background-image: url("../images/icons/user-accent.svg");
+    }
   }
 
   &__title {
@@ -115,11 +123,16 @@
   &__link {
     position: relative;
     padding-right: 15px;
-    transition: color 0.3s ease-in-out;
+    transition: all .3s ease-in-out;
   }
 
   &__link:hover {
     color: $accent;
+    text-decoration-line: underline;
+
+    &::after {
+      background-image: url("../images/icons/arrow-accent.svg");
+    }
   }
 
   &__link::after {
