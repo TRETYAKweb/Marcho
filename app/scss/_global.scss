@@ -29,7 +29,6 @@ section {
   padding: 0 15px;
 }
 
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -64,7 +63,7 @@ section {
     color: $dark-900;
     box-shadow: none;
     border: 1px solid $accent;
-    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   }
 
   &--border:hover {
@@ -88,4 +87,60 @@ section {
 .text {
   max-width: 570px;
   margin-bottom: 60px;
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:first-child {
+    position: relative;
+    padding-left: 25px;
+  }
+
+  &__item:first-child::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-image: url("../images/icons/breadcrumbs/home-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__item {
+    color: #727272;
+    line-height: 1;
+    position: relative;
+  }
+
+  &__item:not(:last-child) {
+    padding-right: 40px;
+  }
+
+  &__item:last-child {
+    color: $accent;
+  }
+
+  &__item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 10px;
+    top: 50%;
+    right: 10%;
+    transform: translate(-50%, -50%);
+    background-image: url("../images/icons/breadcrumbs/angle-right.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
