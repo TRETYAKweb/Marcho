@@ -6,147 +6,23 @@
 
 @import "components/header";
 
-@import "components/home/top-slider";
-@import "components/home/top-categories";
-@import "components/home/video-fashion";
-@import "components/home/products";
-@import "components/home/promo";
-@import "components/home/partners";
+@import "components/home/home";
 
-.blog {
-  padding: 0 0 160px;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-
-  &__title {
-    text-align: center;
-  }
-
-  &__text {
-    text-align: center;
+.top {
+  padding: 0;
+  &__container {
+    max-width: 1700px;
     margin: 0 auto;
-    margin-bottom: 60px;
-  }
-
-  &__items {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 30px;
-  }
-}
-
-.blog-item {
-  background-color: $white;
-  border: 1px solid $border-color;
-
-  transition: box-shadow 0.3s ease-in-out, border 0.1s ease-in-out;
-
-  &:hover {
-    box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
-    border: opacify($color: $border-color, $amount: 0);
-  }
-
-  &__wrap {
-    padding: 30px 40px;
-  }
-
-  &__images {
-    height: 288px;
-    object-fit: contain;
-  }
-
-  &__info {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__info-link,
-  &__date {
-    position: relative;
-    padding-left: 30px;
-  }
-
-  &__info-link::before,
-  &__date::before {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-  }
-
-  &__info-link::before {
-    background-image: url("../images/icons/user-grey.svg");
-  }
-
-  &__date::before {
-    background-image: url("../images/icons/time.svg");
-  }
-
-  &__info-link {
-    transition: all .3s ease-in-out;
-  }
-
-  &__info-link:hover {
-    color: $accent;
-    text-decoration-line: underline;
-    &::before {
-      background-image: url("../images/icons/user-accent.svg");
-    }
+    background-size: cover;
+    background-position: top center;
+    padding: 130px 0 140px;
+    text-align: center;
   }
 
   &__title {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    font-size: 22px;
-    line-height: 32px;
-    color: $dark-900;
-    height: 64px;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    margin-bottom: 10px;
-    transition: all 0.3s ease-in-out;
-  }
-
-  &__title:hover {
-    color: $accent;
-    text-decoration-line: underline;
-  }
-
-  &__link {
-    position: relative;
-    padding-right: 15px;
-    transition: all .3s ease-in-out;
-  }
-
-  &__link:hover {
-    color: $accent;
-    text-decoration-line: underline;
-
-    &::after {
-      background-image: url("../images/icons/arrow-accent.svg");
-    }
-  }
-
-  &__link::after {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 8px;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    background-image: url("../images/icons/arrow.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
   }
 }
 
