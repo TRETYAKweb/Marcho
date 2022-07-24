@@ -5,25 +5,92 @@
 @import "global";
 
 @import "components/header";
+@import "components/top";
 
 @import "components/home/home";
 
-.top {
-  padding: 0;
-  &__container {
-    max-width: 1700px;
-    margin: 0 auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-    padding: 130px 0 140px;
-    text-align: center;
-  }
+.modal {
+  max-width: 570px;
+  margin: 0 auto;
 
-  &__title {
+  &__list {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
+    font-size: 22px;
+    line-height: 1;
+    color: #909090;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    text-transform: uppercase;
   }
+
+  &__item:not(:last-child) {
+    margin-right: 60px;
+  }
+
+  &__link {
+    transition: color 0.3s ease-in-out;
+  }
+
+  &__link:hover {
+    color: $accent;
+  }
+
+  &__link--active {
+    font-weight: 700;
+    color: $accent;
+  }
+
+  &__form-title {
+    display: block;
+  }
+
+  &__form-title:first-child {
+    margin-bottom: 40px;
+  }
+
+  &__form-title:nth-child(2) {
+    margin-bottom: 60px;
+  }
+
+  &__form-input {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: $bg-color;
+    margin-top: 4px;
+    padding: 0 14px;
+    height: 60px;
+  }
+
+  &__form-input:focus {
+    outline-color: transparent;
+    border: 2px solid $accent;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__lost-password {
+    color: $accent;
+    transition: color .3s ease-in-out, text-decoration .3s ease-in-out;
+  }
+
+  &__lost-password:hover {
+    color: $hover-btn;
+    text-decoration-line: underline;
+  }
+
 }
 
 @import "components/footer";
