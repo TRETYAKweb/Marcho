@@ -5,26 +5,9 @@
 @import "global";
 
 @import "components/header";
+@import "components/top";
 
 @import "components/home/home";
-
-.top {
-  padding: 0;
-  &__container {
-    max-width: 1700px;
-    margin: 0 auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-    padding: 130px 0 140px;
-    text-align: center;
-  }
-
-  &__title {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-  }
-}
 
 @import "components/footer";
 
