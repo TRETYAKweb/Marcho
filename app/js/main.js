@@ -1,6 +1,11 @@
-$(function() {
+$(function () {
 
-  $('.top-slider__inner') .slick({
+  $('.filter-price__input').ionRangeSlider({
+    type: "double",
+    prefix: "$"
+  });
+
+  $('.top-slider__inner').slick({
     dots: true,
     arrows: false,
     fade: true,
@@ -57,9 +62,9 @@ $(function() {
     const timeinterval = setInterval(updateClock, 1000);
   }
 
-  const deadline = $('.promo__clock').attr('data-time') ;
+  const deadline = $('.promo__clock').attr('data-time');
   initializeClock('promo__clock', deadline);
 
-    // </promo__clock>
+  // </promo__clock>
 
 });
