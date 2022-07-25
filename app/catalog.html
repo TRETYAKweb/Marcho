@@ -16,7 +16,7 @@
   <meta name="application-name" content="My Application">
   <meta name="msapplication-config" content="./browserconfig.xml">
 
-  <title>Marho | 404 error</title>
+  <title>Marho | Catalog page</title>
 
   <link rel="stylesheet" href="css/style.min.css">
 
@@ -54,9 +54,9 @@
 
 <body>
 
-  <h1 class="sr-only">404 error</h1>
+  <h1 class="sr-only">Страница каталога</h1>
 
-  <header class="header header--404-page">
+  <header class="header">
 
     <div class="container">
 
@@ -128,34 +128,95 @@
 
   <main class="main">
 
-    <section class="page-404">
+    <section class="top">
+      <div class="top__container" style="background-image: url(images/breadcrumbs/breadcrumbs-bg.jpg)">
+        <div class="container">
 
-      <div class="container">
+          <h2 class="top__title title">Shop page</h2>
 
-        <div class="page-404__inner">
+          <div class="breadcrumbs">
 
-          <div class="page-404__content">
+            <ul class="breadcrumbs__list">
 
-            <h2 class="page-404__title title">
-              OPPS! Page Not Found!!
-            </h2>
+              <li class="breadcrumbs__item">
 
-            <p class="page-404__text text">
-              We,re sorry but we can't seem to find the pages you request. This might be because you have typed the web address not
-              find incorrectly.
-            </p>
+                <a class="breadcrumbs__link" href="#">Home</a>
 
-            <a class="page-404__btn btn" href="#">Back to home</a>
+              </li>
+
+              <li class="breadcrumbs__item">
+
+                <a class="breadcrumbs__link" href="#">Shop page</a>
+
+              </li>
+
+            </ul>
 
           </div>
 
-          <img class="page-404__images" src="images/page-404-bg.svg" width="600" height="549" alt="404 error images">
+        </div>
+      </div>
+    </section>
+
+    <section class="shop">
+      <div class="container">
+
+        <div class="shop__inner">
+
+          <div class="filter">
+
+            <div class="filter-search filter__item">
+
+              <h4 class="filter-search__title filter__title">Search</h4>
+
+              <form class="filter-search__form" action="#">
+
+                <input class="filter-search__input" type="text" placeholder="Search your keyword....">
+
+                <button class="filter-search__btn btn" type="submit">
+
+                  <img class="filter-search__img" src="images/icons/search-white.svg" alt="search button">
+
+                </button>
+
+              </form>
+
+            </div>
+
+            <div class="filter-price filter__item">
+
+              <h4 class="filter-price__title filter__title">Price filter</h4>
+
+              <form class="filter-price__form" action="#">
+                <input class="filter-price__input" type="text" data-min="0" data-max="999" data-from="200"
+                  data-to="800" />
+
+                <div class="filter-price__wrap">
+
+                  <span>Price:</span>
+
+                  <button class="filter-price__btn btn" type="submit">Filter</button>
+
+                </div>
+
+              </form>
+
+            </div>
+
+
+
+          </div>
+
+          <div class="shop__content"></div>
 
         </div>
 
       </div>
-
     </section>
+
+
+
+
 
   </main>
 

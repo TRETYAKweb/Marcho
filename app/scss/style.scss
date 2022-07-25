@@ -10,32 +10,65 @@
 @import "components/home/home";
 @import "components/register-login/register-login";
 
-
-.page-404 {
-
+.shop {
   &__inner {
     display: flex;
-    justify-content: space-between;
+  }
+}
+
+.filter {
+  max-width: 370px;
+  width: 100%;
+  margin-right: 30px;
+
+  &__title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1;
+    color: $dark-900;
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    padding: 40px 30px;
+    border: 1px solid $border-color;
+  }
+}
+
+.filter-search {
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__form {
+    display: flex;
     align-items: center;
   }
 
-  &__content {
-    max-width: 570px;
+  &__input {
+    border: none;
+    background-color: $bg-color;
+    height: 50px;
+    max-width: 258px;
     width: 100%;
+    padding: 0 10px 0 15px;
   }
 
-  &__title {
-    color: #28384f;
-    text-transform: none;
+  &__input:focus {
+    outline-color: $accent;
+    border-radius: 0%;
   }
 
-  &__text {
-    max-width: 470px;
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
   }
-
 }
 
-
+@import "components/page-404";
 @import "components/footer";
 
 @import "media";
