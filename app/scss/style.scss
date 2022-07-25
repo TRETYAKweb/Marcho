@@ -27,12 +27,17 @@
     font-size: 22px;
     line-height: 1;
     color: $dark-900;
+    text-transform: uppercase;
     margin-bottom: 40px;
   }
 
   &__item {
     padding: 40px 30px;
     border: 1px solid $border-color;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 40px;
   }
 }
 
@@ -65,7 +70,62 @@
     justify-content: center;
     align-items: center;
     padding: 15px;
+    box-shadow: none;
   }
+}
+
+.filter-price {
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+  }
+
+  &__btn {
+    line-height: 1;
+    padding: 12px 23px;
+  }
+}
+
+.irs--flat .irs-line {
+  top: 13px;
+  height: 5px;
+  background-color: $border-color;
+  border-radius: 0px;
+}
+
+.irs--flat .irs-bar {
+  top: 13px;
+  height: 5px;
+  background-color: $accent;
+}
+
+.irs--flat .irs-handle {
+  top: 0px;
+  width: 30px;
+  height: 30px;
+  background-color: $white;
+  box-shadow: 0px 0px 13px 0px rgba(90, 90, 90, 0.2);
+}
+
+.irs--flat .irs-handle > i:first-child {
+  display: none;
+}
+
+.irs-from,
+.irs-to,
+.irs-single {
+  display: none;
+}
+
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+  display: none;
+}
+
+.irs--flat {
+    height: 30px;
 }
 
 @import "components/page-404";
