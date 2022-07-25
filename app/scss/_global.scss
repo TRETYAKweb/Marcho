@@ -41,6 +41,14 @@ section {
   border: 0;
 }
 
+  .checkbox-hidden {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+  }
+
 .btn {
   padding: 15px 35px;
   font-family: "Roboto", sans-serif;
