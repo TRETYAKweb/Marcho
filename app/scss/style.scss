@@ -138,14 +138,13 @@
     cursor: pointer;
 
     span {
-    transition: color .3s ease-in-out;
+      transition: color 0.3s ease-in-out;
     }
-    
   }
 
   &__label:hover {
     span {
-      color: #f52574;
+      color: $accent;
     }
   }
 
@@ -158,20 +157,10 @@
     padding-top: 20px;
   }
 
-  &__input {
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    position: absolute;
-  }
-
   &__input:checked + .filter-color__checkbox {
-
     background-image: url("../images/icons/check-on.svg");
     background-repeat: no-repeat;
-    background-position: center; 
-
+    background-position: center;
   }
 
   &__checkbox {
@@ -200,6 +189,48 @@
   &__checkbox--purple {
     background-color: #923899;
   }
+}
+
+.filter-size {
+
+  &__label {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+  }
+
+  &__label:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__input:checked + .filter-size__checkbox {
+    border: 1px solid $accent;
+    background-image: url("../images/icons/check-on-accent.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    & + .filter-size__text {
+      color: $accent;
+    }
+  }
+
+  &__checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid $default;
+    margin-right: 15px;
+  }
+
+  &__text {
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+  }
+
+  &__text:hover {
+    color: $accent;
+  }
+
 }
 
 @import "components/page-404";
