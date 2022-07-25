@@ -233,6 +233,35 @@
 
 }
 
+.filter-category {
+
+  &__label:not(:last-child) {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  &__checkbox {
+    display: flex;
+    justify-content: space-between;
+    background-color: $bg-color;
+    color: $dark-900;
+    line-height: 1;
+    padding: 17px 20px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out ;
+  }
+
+  &__checkbox:hover {
+    background-color: #ffd7dc;
+  }
+
+  &__input:checked + .filter-category__checkbox {
+    background-color: $accent;
+    color: $white;
+  }
+
+}
+
 @import "components/page-404";
 @import "components/footer";
 
