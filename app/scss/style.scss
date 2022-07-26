@@ -262,6 +262,32 @@
 
 }
 
+.filter-popular {
+
+  &__title {
+    text-transform: none;
+  }
+
+  &__label {
+    display: inline-block;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    padding: 10px 0;
+  }
+
+  &__input:checked + .filter-popular__checkbox {
+    color: $white;
+    background-color: $accent;
+    border-color: $accent;
+  }
+  
+  &__checkbox {
+    padding: 10px 20px;
+    border: 1px solid $default;
+  }
+
+}
+
 @import "components/page-404";
 @import "components/footer";
 
