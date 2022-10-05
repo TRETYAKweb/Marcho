@@ -192,7 +192,6 @@
 }
 
 .filter-size {
-
   &__label {
     display: flex;
     align-items: center;
@@ -224,17 +223,15 @@
 
   &__text {
     cursor: pointer;
-    transition: color .3s ease-in-out;
+    transition: color 0.3s ease-in-out;
   }
 
   &__text:hover {
     color: $accent;
   }
-
 }
 
 .filter-category {
-
   &__label:not(:last-child) {
     display: block;
     margin-bottom: 15px;
@@ -248,7 +245,7 @@
     line-height: 1;
     padding: 17px 20px;
     cursor: pointer;
-    transition: background-color .3s ease-in-out ;
+    transition: background-color 0.3s ease-in-out;
   }
 
   &__checkbox:hover {
@@ -259,11 +256,9 @@
     background-color: $accent;
     color: $white;
   }
-
 }
 
 .filter-popular {
-
   &__title {
     text-transform: none;
   }
@@ -273,6 +268,7 @@
     margin-bottom: 8px;
     margin-right: 8px;
     padding: 10px 0;
+    cursor: pointer;
   }
 
   &__input:checked + .filter-popular__checkbox {
@@ -280,12 +276,95 @@
     background-color: $accent;
     border-color: $accent;
   }
-  
+
   &__checkbox {
     padding: 10px 20px;
     border: 1px solid $default;
   }
+}
 
+.shop-content {
+  width: 100%;
+  &__filter {
+    padding: 20px 25px;
+    border: 1px solid $border-color;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__filter-btns {
+    display: flex;
+    align-items: center;
+  }
+  &__filter-btns span {
+    margin-right: 15px;
+  }
+  &__filter-btn {
+    border: none;
+    background: transparent;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__filter-btn:not(:last-child) {
+    margin-right: 15px;
+  }
+  &__filter-btn svg {
+    fill: $default;
+    transition: fill 0.3s ease-in-out;
+  }
+  &__filter-btn svg:hover {
+    fill: $accent;
+  }
+  &__filter-btn--active svg {
+    fill: $accent;
+  }
+}
+
+.jq-selectbox__select {
+  height: 32px;
+  padding: 0 45px 0 10px;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  font-family: "Quicksand", sans-serif;
+  color: $default;
+  text-shadow: none;
+  transition: color 0.3s ease-in-out;
+  &:hover {
+    background: transparent;
+    color: $accent;
+  }
+}
+
+.select-style:not(:last-child) {
+  margin-right: 20px;
+}
+
+.jq-selectbox__trigger {
+  border-left: none;
+}
+
+.jq-selectbox__trigger-arrow {
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  width: 10px;
+  height: 5px;
+  border: none;
+  background-image: url("../images/icons/angle-down.svg");
+}
+
+.jq-selectbox li.selected {
+  background-color: $accent;
+}
+
+.jq-selectbox li:hover {
+  background-color: $accent;
 }
 
 @import "components/page-404";
